@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <title>rock-paper-scissor</title>
+</head>
+<body>
+  <section class="game">
+    <div class="score">
+      <div class="player-score">
+        <h3>player</h3>
+        <p class="p-score-value">0</p>
+      </div>
+
+      <div class="computer-score">
+        <h3>Computer</h3>
+        <p class="c-score-value">0</p>
+      </div>
+    </div>
+
+    <div class="intro">
+      <h4>click start to begin game</h4>
+      <button class="start-game">start</button>
+    </div>
+
+    <div class="game-on hide">
+      <h4 class="notification">player choose</h4>
+      <div class="hand">
+        <img src="./images/rock.png" alt="" class="player">
+        <img src="./images/rock.png" alt="" class="computer">
+      </div>
+      <div class="hand-options">
+        <button class="option">rock</button>
+        <button class="option">paper</button>
+        <button class="option">scissor</button>
+      </div>
+      
+    </div>
+
+  </section>
+  <script src="./app.js"></script>
+</body>
+</html>
