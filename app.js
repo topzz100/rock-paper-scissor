@@ -14,21 +14,35 @@ let cScore = 0;
 const computerOptions = ['rock', 'paper', 'scissors'];
 
 
-
 options.forEach(option => {
   option.addEventListener('click', () => {
-    // player.style.animation = 'player-animation 2s ease'
-    // computer.style.animation = `computer-animation 2s`
-    const choice = computerChoice();
+    gameAnimation();
+     setTimeout(() => {
+      const choice = computerChoice();
     
-    player.src = `./images/${option.textContent}.png`;
-    computer.src = `./images/${choice}.png`;
-
-    checkWinner(option.textContent, choice)
-    console.log(choice)
-    console.log(option.textContent)
+      player.src = `./images/${option.textContent}.png`;
+      computer.src = `./images/${choice}.png`;
+  
+      checkWinner(option.textContent, choice)
+      console.log(choice)
+      console.log(option.textContent)
+      removeAnimation()
+     }, 1000)
+   
   })
 });
+
+const gameAnimation = () => {
+  player.src = `./images/rock.png`;
+  computer.src = `./images/rock.png`;
+  player.style.animation = 'player-animation 1s ease'
+  computer.style.animation = `computer-animation 1s ease`
+}
+
+const removeAnimation = () => {
+  player.style.animation = 'none'
+  computer.style.animation = `none`
+}
 
 const computerChoice = () => {
   const compIndex = Math.floor(Math.random() * 3)
